@@ -131,7 +131,8 @@
   <section id="contact" class="contact-form">
     <div class="contact-form__form-container">
       <h2 class="contact-form__form-header">Contact Us</h2>
-      <form action="/" class="contact-form__form">
+    <form action="{{ route('ContactrequestController.create') }}" method="POST" class="contact-form__form">
+      {{ csrfField() }}
         <div class="contact-form__form-input-group">
           <label for="name">Name</label>
           <input type="text" name="name" id="name" placeholder="John Doe">
@@ -154,3 +155,7 @@
 @section('scripts')
   <script src="scripts/front-page.js"></script>
 @endsection
+
+<script>
+  console.log({{response}});
+</script>
