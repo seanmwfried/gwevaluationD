@@ -1,0 +1,394 @@
+/* Landing */
+
+.landing {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  box-shadow: 0 2px 5px #000d;
+  z-index: 1;
+}
+
+.landing__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.landing__splash {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rolodex {
+  position: relative;
+  margin: 0 auto;
+  width: 800px;
+  height: 100px;
+  border: 3px solid white;
+  overflow: hidden;
+}
+
+.rolodex__item {
+  position: absolute;
+  top: 100%;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+  letter-spacing: 2rem;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Start first element in view */
+.rolodex__item:first-child {
+  top: 0;
+  transition-duration: 1s; /*This will need to be synced with the rolodex JS value */
+}
+
+.landing__call-to-action {
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.landing__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  height: 5rem;
+  width: 275px;
+  border: 1px solid white;
+  color: white;
+  font-size: 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.landing__button:hover {
+  background-color: white;
+  color: black;
+}
+
+.landing__button--inverted {
+  background-color: white;
+  color: black;
+}
+
+.landing__button--inverted:hover {
+  /* Use Bootstrap's .info color on hover */
+  background-color: #33b5e5;
+  border: 1px solid #33b5e5;
+  color: white;
+}
+
+.landing__button--inverted:visited {
+  color: black;
+}
+
+.landing__button--inverted:visited:hover {
+  color: white;
+}
+
+@media only screen and (max-width: 992px) {
+  .landing {        
+    background-color: #000;
+    background-image: url("images/sm7b_cropped.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .rolodex{
+    width: 600px;
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .landing__splash {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: inherit;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .rolodex{
+    width: 90%;
+    height: 100px;
+  }
+
+  .rolodex__item {
+    font-size: 2.5rem;
+  }
+
+  .landing__call-to-action {
+    width: 90%;
+    display: block;
+    text-align: center;
+  }
+
+  .landing__button {
+    margin: 20px auto;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .landing {
+    height: 85vh;
+  }
+
+  .rolodex {
+    height: 75px;
+  }
+
+  .rolodex__item {
+    font-size: 1.5rem;
+    letter-spacing: 1rem;
+  }
+}
+
+/* About Us */
+
+.about-us {
+  color: black;
+}
+
+.about-us__fixed-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("images/mixer.jpg");
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.about-us__text-container {
+  height: 100%;
+}
+
+.about-us__heading {
+  padding: 15px 0px;
+  text-align: center;
+}
+
+.about-us__paragraph {
+  margin: 2rem;
+}
+
+.about-us__paragraph::first-line {
+  text-indent: 2rem;
+}
+
+.about-us__paragraph:last-child {
+  margin-bottom: 4rem;
+}
+
+.about-us__heading-container:after {
+  display: block;
+  height: 2px;
+  content: " ";
+  background: linear-gradient(to right, transparent 20%, black 40%, black 60%, transparent 80%);
+}
+
+@media only screen and (min-width: 768px) {
+  .about-us__heading-container {
+    background: linear-gradient(to right, transparent 20%, white 40%, white 60%, transparent 80%);
+  }
+
+  .about-us__text-container {
+    background: linear-gradient(to right, transparent 20%, #ddd 40%, #ddd 60%, transparent 80%);
+  }      
+}    
+
+@media only screen and (min-width: 992px) {
+  .about-us__heading {
+    text-align: right;
+  }
+
+  .about-us__heading-container:after {
+    display: block;
+    background: linear-gradient(to right, transparent 40%,  #000d 75%);
+  }
+
+  .about-us__heading-container {
+    background: linear-gradient(to right, transparent 40%,  #eee 75%);
+  }
+
+  .about-us__text-container {
+    background: linear-gradient(to right, transparent, #ddd 60%);
+  }
+
+  .about-us__paragraph {
+    font-size: 1.75rem;
+  }
+}
+
+/* Pricing */
+
+.pricing {
+  position: relative;
+  background-color: #3d524f;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 -2px 5px #000d, 0 2px 5px #000d;
+  z-index: 1;
+}
+
+.pricing__heading-container {
+  margin-bottom: 10px;
+}
+
+.pricing__heading-container:after {
+  display: block;
+  height: 2px;
+  content: " ";
+  background: linear-gradient(to right, transparent 20%, white 40%, white 60%, transparent 80%);
+}
+
+.pricing__heading {
+  padding: 15px 0px;
+  text-align: center;
+}
+
+.pricing__cards-container {  
+  margin-top: 30px;    
+  max-width: 300px;
+  height: 100%;
+  padding: 30px inherit;
+  color: black;
+  z-index: 2;
+}
+
+.pricing__card {
+  width: 300px;
+  background-color: #eee;
+  text-align: center;
+  padding: 30px 15px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+
+.card__icon {
+  padding-bottom: 20px;
+}
+
+.card__title {
+  padding-top: 10px;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.card__price {
+  font-size: 2.25rem;
+  font-style: italic;
+
+}
+.card__description {}
+
+@media only screen and (min-width: 768px) {
+  .pricing__cards-container {
+    max-width: 680px;
+  }
+
+  .pricing__card {
+    margin: 20px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .pricing {
+    background-image: url("images/computersetup.jpg");
+  }  
+
+  .pricing__heading {
+    text-align: left;
+  }
+
+  .pricing__heading-container:after {
+    display: block;
+    background: linear-gradient(to left, transparent 40%,  #ffff 75%);
+  }
+
+  .pricing__heading-container {
+    background: linear-gradient(to left, transparent 40%,  #333 75%);
+  }
+
+  .pricing__cards-container {
+    margin-left: 0;
+  }
+}
+
+/* Contact Us */
+.contact-form {
+  min-height: 70vh;
+  background-image: url("images/homestudio.jpg");
+  background-position: bottom;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form__form-container {
+  background-color: #eee;
+  color: black;
+  padding: 25px;
+  min-width: 300px;
+  box-shadow: 2px 2px 5px #000d;
+  border-radius: 10px;
+}
+
+.contact-form__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form__form-input-group {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+}
+
+.contact-form__form-input-group input {
+  border-radius: 5px;
+  border: 2px solid #bbb;
+  padding: 5px;
+  /* border-style: none; */
+}
+
+.contact-form__form-input-group input:focus {
+  border: 2px solid #33b5e5;
+}
+
+.contact-form__form-input-group input::placeholder {
+  color: #888;
+}
+
+.contact-form__button {
+  margin-top: 5px;
+}
+
+@media only screen and (min-width: 992px) {
+  .contact-form {
+    background-size: cover;
+  }
+}
