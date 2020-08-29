@@ -1,0 +1,41 @@
+@import "sass/master.scss";
+
+.darkening-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0008;
+  background-repeat: repeat;
+}
+
+//Landing
+.landing {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+  box-shadow: 0 2px 5px color(boxshadow);
+  z-index: 1;
+  background-image: url("../images/sm7b_cropped.jpg");
+  background-size: cover;
+  background-position: center;
+
+  @include media-breakpoint-up(sm) {
+    & {
+      height: 70vh;
+    }
+  }
+
+  &__video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+  }
+}
+

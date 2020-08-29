@@ -1,0 +1,12 @@
+//Color Functions
+@function color($color) {
+  @return map-get($colors, $color)
+};
+
+//Color Variables
+$colors: (
+  bright: #eee,
+  dark: #333,
+  verydark: #222,
+  boxshadow: #000d
+);

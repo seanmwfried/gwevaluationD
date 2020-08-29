@@ -1,8 +1,14 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAEA,AAAA,gBAAgB,CAAC;EACf,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,CAAC;EACN,IAAI,EAAE,CAAC;EACP,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,gBAAgB,EAAE,KAAK;EACvB,iBAAiB,EAAE,MAAM;CAC1B;;AAGD,AAAA,QAAQ,CAAC;EACP,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,QAAQ,EAAE,MAAM;EAChB,UAAU,EAAE,CAAC,CAAC,GAAG,CAAC,GAAG,CMRV,KAAK;ENShB,OAAO,EAAE,CAAC;EACV,gBAAgB,EAAE,iCAAiC;EACnD,eAAe,EAAE,KAAK;EACtB,mBAAmB,EAAE,MAAM;CAiB5B;;AKqBG,MAAM,EAAE,SAAS,EAAE,KAAK;EL/C5B,AAYI,QAZI,CAYF;IACA,MAAM,EAAE,IAAI;GACb;;;AAGF,AAAD,eAAQ,CAAC;EACP,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,GAAG;EACR,IAAI,EAAE,GAAG;EACT,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,SAAS,EAAE,qBAAqB;EAChC,UAAU,EAAE,KAAK;CAClB",
     "sources": [
-        "front-page.scss"
+        "front-page.scss",
+        "sass/master.scss",
+        "sass/imports.scss",
+        "../../node_modules/bootstrap/scss/_functions.scss",
+        "../../node_modules/bootstrap/scss/_variables.scss",
+        "../../node_modules/bootstrap/scss/mixins/_breakpoints.scss",
+        "sass/colors.scss"
     ],
     "names": [],
     "file": "front-page.css"

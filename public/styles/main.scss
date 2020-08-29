@@ -1,23 +1,7 @@
-//Bootstrap
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
-@import "../../node_modules/bootstrap/scss/mixins/_breakpoints";
+@import "sass/master.scss";
 
 //Fonts
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
-
-//Functions
-@function color($color) {
-  @return map-get($colors, $color)
-};
-
-//Variables
-$colors: (
-  bright: #eee,
-  dark: #333,
-  verydark: #222,
-  boxshadow: #000d
-);
 
 ///////////////////////////////
 // change this later
@@ -65,16 +49,6 @@ a {
 //Helper classes
 .spaced-word {
   letter-spacing: 0.25em;
-}
-
-.darkening-layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #0008;
-  background-repeat: repeat;
 }
 
 .header-font {

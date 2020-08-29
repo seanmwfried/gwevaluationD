@@ -43,16 +43,6 @@ a:focus {
   letter-spacing: 0.25em;
 }
 
-.darkening-layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #0008;
-  background-repeat: repeat;
-}
-
 .header-font {
   font-family: 'Montserrat', sans-serif;
 }
