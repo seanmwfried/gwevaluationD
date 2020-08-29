@@ -8,6 +8,7 @@
   function CheckScroll(event) {
     const scrollTop = event.target.scrollingElement.scrollTop;
     const header = document.getElementsByTagName("header")[0];
+    const backToTopButton = document.getElementsByClassName("btn-back-to-top")[0];
 
     //Add and removed 'scrolled' class when scrolling for effect
     if ( scrollTop >= 50 && !header.classList.contains("scrolled")) {
@@ -15,10 +16,7 @@
     } else if ( scrollTop < 50 && header.classList.contains("scrolled")) {
       header.classList.remove("scrolled");
     }
-
-    const scrollTop = event.target.scrollingElement.scrollTop;
-    const backToTopButton = document.getElementsByClassName("btn-back-to-top")[0];
-    //Else use back to top button
+    
     //Add and removed 'scrolled' class when scrolling for effect
     if ( scrollTop >= 50 && !backToTopButton.classList.contains("scrolled")) {
       backToTopButton.classList.add("scrolled");

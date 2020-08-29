@@ -66,35 +66,37 @@
   </div>
   {{--  Begin Header / Nav  --}}
   <header class="container-fluid">
-    <nav class="row">
-      <span class="  spaced-word header-font nav__logo">Recording<br>Studio</span>
-      <ul class="  nav__ul list-unstyled">
-        <li class=" ">
-          <a href="#" class="nav__link">
+    <nav class="nav row no-gutters d-flex align-items-center">
+      <span class="spaced-word header-font nav__logo col">Recording<br>Studio</span>
+      <ul class="nav__ul col d-flex justify-content-end list-unstyled">
+        <li>
+          <a href="#top" class="nav__link d-none d-lg-block">
             About
           </a>
         </li>
-        <li class=" ">
-          <a href="#pricing" class="nav__link">
+        <li>
+          <a href="#pricing" class="nav__link d-none d-lg-block">
             Pricing
           </a>
         </li>
-        <li class=" ">
-          <a href="#contact" class="nav__link">
+        <li>
+          <a href="#contact" class="nav__link d-none d-lg-block">
             Contact
           </a>
         </li>
-        <li class="  nav__mobile-menu-button">
+        <li class="nav__mobile-menu-button d-lg-none">
           <i class="fas fa-bars fa-2x"></i>
         </li>
       </ul>
     </nav>
   </header>
   {{--  End Header / Nav  --}}
-  {{--  Begin Content  --}}
-  {{--  @!section('content')  --}}
-  <div class="fakecontent"></div>
-  {{--  End Content  --}}
+  <main>
+    {{--  Begin Content  --}}
+    {{--  @!section('content')  --}}
+    <div class="fakecontent"></div>
+    {{--  End Content  --}}
+  </main>
   {{--  Begin Footer  --}}
   <footer>
     &copy; 2020 Sean Fried

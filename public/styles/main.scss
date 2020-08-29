@@ -16,6 +16,7 @@ $colors: (
   bright: #eee,
   dark: #333,
   verydark: #222,
+  boxshadow: #000d
 );
 
 ///////////////////////////////
@@ -59,6 +60,25 @@ a {
     color: white;
     text-decoration: none;
   }
+}
+
+//Helper classes
+.spaced-word {
+  letter-spacing: 0.25em;
+}
+
+.darkening-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0008;
+  background-repeat: repeat;
+}
+
+.header-font {
+  font-family: 'Montserrat', sans-serif;
 }
 
 // Scrollbar style for browsers that support it
@@ -136,16 +156,55 @@ a {
 }
 
 // Header and Nav
-
 header {
   position: fixed;
   width: 100vw;
   z-index: 5;
   transition-duration: 0.5s;
-  background-color: #2220;
+  background-color: rgba(color(verydark), 0);
   box-shadow: 0 2px 5px #0000;
+
+  @include media-breakpoint-down(md) {
+    &.scrolled {
+      background-color: color(verydark);
+      box-shadow: 0 2px 5px color(boxshadow);
+    }
+  }
 
   @include media-breakpoint-up(lg) {
     position: absolute;
   }
+
+  .nav {
+    &__ul {
+      margin: 0;
+    }
+
+    &__link {
+      display: inline-block;
+      text-align: center;
+      padding: 20px;
+      width: 150px;
+      cursor: pointer;
+      border-bottom: 2px solid rgba(color(bright), 0);
+
+      &:hover {
+        border-bottom: 2px solid color(bright);
+      }
+    }
+
+    &__mobile-menu-button {
+      padding: 16px;
+      cursor: pointer;
+    }
+  }
+}
+
+//Footer
+footer {
+  padding: 10px;
+  text-align: right;
+  background-color: color(verydark);
+  color: #aaa;
+  z-index: -1;
 }
