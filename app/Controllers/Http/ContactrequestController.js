@@ -3,7 +3,7 @@
 const Contactrequest = use("App/Models/Contactrequest");
 
 class ContactrequestController {
-  async create({request, response, view}) {
+  async create({ request, response }) {
     const data = request.only(["name", "email", "phone"]);
     const contactrequest = new Contactrequest;
     
@@ -13,7 +13,15 @@ class ContactrequestController {
 
     await contactrequest.save();
 
-    return response.redirect('/done');
+    return response.redirect('/');
+  }
+
+  async receive({ view }) {
+    const contactrequests = await Contactrequest.all();
+
+    const requests = contactrequests.toJSON();
+
+    return view.render('front-page', { requests: requests });
   }
 }
 

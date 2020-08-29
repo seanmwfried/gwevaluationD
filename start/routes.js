@@ -17,4 +17,4 @@
 const Route = use('Route');
 
 Route.post('/', 'ContactrequestController.create');
-Route.on('/').render('front-page');
+Route.get('/', 'ContactrequestController.receive');

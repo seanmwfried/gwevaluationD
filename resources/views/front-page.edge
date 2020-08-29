@@ -154,8 +154,10 @@
 
 @section('scripts')
   <script src="scripts/front-page.js"></script>
+  
+  @each(request in requests)
+  <script>
+    alert({{request}})
+  </script>
+  @endeach
 @endsection
-
-<script>
-  console.log({{response}});
-</script>
