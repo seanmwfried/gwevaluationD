@@ -74,6 +74,7 @@ a:focus {
   border: 1px solid #eee;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
+  z-index: 10;
 }
 
 .btn-back-to-top.scrolled {

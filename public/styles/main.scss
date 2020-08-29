@@ -81,6 +81,7 @@ a {
   background: color(verydark);
   border: 1px solid color(bright);
   transition-duration: 0.5s;
+  z-index: 10;
 
   &.scrolled {
     opacity: 1;
