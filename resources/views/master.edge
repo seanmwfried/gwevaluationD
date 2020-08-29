@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="styles/main.css">
 
   {{--  Plug for extra stylesheets  --}}
-  @!section('stylesheet')
+  {{--  @!section('stylesheet')  --}}
 
   {{--  FontAwesome  --}}
   <script src="https://kit.fontawesome.com/16308709c3.js" crossorigin="anonymous"></script>
@@ -23,41 +23,41 @@
 <body>
   <noscript>This site requires JavaScript to be enabled to be displayed correctly.</noscript>
   {{--  Fixed div for go back to top button on medium to large devices  --}}
-  <div class="btn-back-to-top hidden-xs hidden-sm">
+  <div class="btn-back-to-top d-none d-lg-block rounded-circle">
     <a href="#top">
       <i class="fas fa-chevron-up fa-2x"></i>
     </a>
   </div>
   {{--  Mobile Menu Popout  --}}
-  <div class="mobile-menu hidden-md hidden-lg">
+  <div class="mobile-menu d-lg-none d-xl-none">
     <div class="mobile-menu__close-button">
       <i class="fas fa-times fa-2x"></i>
     </div>
-    <ul class="mobile_menu__list-container list-unstyled">
-      <li class="mobile_menu__list-item">
+    <ul class="mobile-menu__list-container list-unstyled">
+      <li class="mobile-menu__list-item">
         <a href="#top">
-          <div>
+          <div class="mobile-menu__list-item-text">
             Home
           </div>
         </a>
       </li>
-      <li class="mobile_menu__list-item">
+      <li class="mobile-menu__list-item">
         <a href="#about">
-          <div>
+          <div class="mobile-menu__list-item-text">
             About
           </div>
         </a>
       </li>
-      <li class="mobile_menu__list-item">
+      <li class="mobile-menu__list-item">
         <a href="#pricing">
-          <div>
+          <div class="mobile-menu__list-item-text">
             Pricing
           </div>
         </a>
       </li>
-      <li class="mobile_menu__list-item">
+      <li class="mobile-menu__list-item">
         <a href="#contact">
-          <div>
+          <div class="mobile-menu__list-item-text">
             Contact
           </div>
         </a>
@@ -67,24 +67,24 @@
   {{--  Begin Header / Nav  --}}
   <header class="container-fluid">
     <nav class="row">
-      <span class="col-xs-8 col-md-3 spaced-word header-font nav__logo">Recording<br>Studio</span>
-      <ul class="col-xs-4 col-md-9 nav__ul list-unstyled">
-        <li class="hidden-xs hidden-sm">
+      <span class="  spaced-word header-font nav__logo">Recording<br>Studio</span>
+      <ul class="  nav__ul list-unstyled">
+        <li class=" ">
           <a href="#" class="nav__link">
             About
           </a>
         </li>
-        <li class="hidden-xs hidden-sm">
+        <li class=" ">
           <a href="#pricing" class="nav__link">
             Pricing
           </a>
         </li>
-        <li class="hidden-xs hidden-sm">
+        <li class=" ">
           <a href="#contact" class="nav__link">
             Contact
           </a>
         </li>
-        <li class="hidden-md hidden-lg nav__mobile-menu-button">
+        <li class="  nav__mobile-menu-button">
           <i class="fas fa-bars fa-2x"></i>
         </li>
       </ul>
@@ -92,7 +92,8 @@
   </header>
   {{--  End Header / Nav  --}}
   {{--  Begin Content  --}}
-  @!section('content')
+  {{--  @!section('content')  --}}
+  <div class="fakecontent"></div>
   {{--  End Content  --}}
   {{--  Begin Footer  --}}
   <footer>
@@ -117,6 +118,6 @@
   {{--  Script for header and mobile menus  --}}
   <script src="scripts/main.js"></script>
   {{--  Plug for extra JavaScript files  --}}
-  @!section('scripts')
+  {{--  @!section('scripts')  --}}
 </body>
 </html>
