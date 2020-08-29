@@ -1,4 +1,4 @@
-@import "sass/master.scss";
+@import "sass/_master.scss";
 
 .darkening-layer {
   position: absolute;
@@ -34,6 +34,12 @@
 
   &__splash {
     height: 100%;
+    
+    @include media-breakpoint-up(sm) {
+      & {
+        height: 70vh;
+      }
+    }
 
     @include media-breakpoint-up(md) {
       & {
@@ -46,11 +52,58 @@
     }
   }
 
-  @include media-breakpoint-up(sm) {
-    & {
-      height: 70vh;
+  &__call-to-action {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    z-index: 1;
+
+    @include media-breakpoint-up(sm) {
+      & {
+        
+      }
     }
   }
+
+  &__button {
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+    width: 100%;
+    max-width: 275px;
+    border: 1px solid color(bright);
+    color: color(bright);
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      background-color: color(bright);
+      color: color(verydark);
+    }
+
+    &--inverted, 
+    &--inverted:focus, 
+    &--inverted:visited,
+    &--inverted:active {
+      background-color: color(bright);
+      color: color(verydark);
+
+      &:hover {
+        background-color: $info;
+        border-color: $info;
+        color: color(bright);
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      margin: 0 10px;
+      width: 275px;
+    }
+  }
+
 }
 
 .rolodex {
@@ -58,7 +111,7 @@
   margin: 0 auto;
   height: 75px;
   width: 90%;
-  border: 3px solid white;
+  border: 3px solid color(bright);
   overflow: hidden;
 
   &__item {
@@ -73,6 +126,11 @@
     justify-content: center;
     font-size: 1rem;
     letter-spacing: 0.75rem;
+
+    &:first-child {
+      top: 0;
+      transition-duration: 1s;
+    }
   }
 
   @include media-breakpoint-up(sm) {
@@ -100,6 +158,129 @@
     & {      
       width: 800px;
       height: 100px;
+    }
+  }
+}
+
+//About us
+.about-us {
+  color: color(verydark);
+
+  &__fixed-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/mixer.jpg");
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  &__heading-container {
+    background: linear-gradient(to right, transparent 20%, color(bright) 40%, color(bright) 60%, transparent 80%);
+
+    &::after {
+      width: 100%;
+      display: block;
+      height: 2px;
+      content: " ";
+      background: linear-gradient(to right, transparent 20%, color(verydark) 40%, color(verydark) 60%, transparent 80%);
+    }
+
+    @include media-breakpoint-up(lg) {
+      & {
+        background: linear-gradient(to right, transparent 40%,  color(bright) 75%);
+
+        &::after {
+          background: linear-gradient(to right, transparent 40%,  color(verydark) 75%);
+        }
+      }
+    }
+  }
+
+  &__heading {
+    text-align: center;
+    padding: 15px 0px;
+
+    @include media-breakpoint-up(lg) {
+      text-align: right;
+    }
+  }
+
+  &__text-container {
+    background: linear-gradient(to right, transparent 20%, #ddd 40%, #ddd 60%, transparent 80%);
+
+    @include media-breakpoint-up(lg) {
+      background: linear-gradient(to right, transparent, #ddd 60%);
+    }
+  }
+
+  &__paragraph {
+    text-indent: 2em;
+    margin: 20px 0px;
+    font-size: initial;
+
+    @include media-breakpoint-up(sm) {
+      & {
+        margin: 30px 30px;
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      & {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+//Pricing
+.pricing {
+  position: relative;
+  background-color: color(seabluegreen);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 -2px 5px color(boxshadow), 0 2px 5px color(boxshadow);
+  z-index: 1;
+
+  @include media-breakpoint-up(lg) {
+    & {
+      background-image: url("../images/computersetup.jpg");
+    }
+  }
+
+  &__heading-container {
+    margin-bottom: 10px;
+
+    &::after {
+      display: block;
+      width: 100%;
+      height: 2px;
+      content: "";
+      background: linear-gradient(to right, transparent 20%, color(bright) 40%, color(bright) 60%, transparent 80%);
+      z-index: 1;
+    }
+
+    @include media-breakpoint-up(lg) {
+      & {
+        background: linear-gradient(to left, transparent 40%,  #333 75%);
+      }
+
+      &::after {
+        background: linear-gradient(to left, transparent 40%,  color(bright) 75%);
+      }
+    }
+  }
+  
+
+  &__heading {
+    text-align: center;
+    padding: 15px 0px;
+
+    @include media-breakpoint-up(lg) {
+      text-align: left;
     }
   }
 }

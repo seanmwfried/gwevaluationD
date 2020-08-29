@@ -1,4 +1,4 @@
-@import "sass/master.scss";
+@import "sass/_master.scss";
 
 //Fonts
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
@@ -7,21 +7,19 @@
 // change this later
 body {
   height: 200vh;
-  background-color: color(verydark);
+  background-color: transparent;
   color: color(bright);
 }
 //////////////////////////////
 
 //Base
 html {
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 } 
 
 a {

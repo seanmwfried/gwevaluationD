@@ -23,12 +23,12 @@
           <span>Relaxed</span>
         </div>
       </div>
-      <div class="landing__call-to-action">
+      <div class="landing__call-to-action d-flex flex-column flex-md-row justify-content-center">
+        <a href="#contact" class="landing__button landing__button--inverted order-md-2">
+          Schedule a Session &nbsp; <i class="fas fa-pen"></i>
+        </a>
         <a href="#about" class="landing__button">
           Learn More &nbsp; <i class="fas fa-book-open"></i>
-        </a>
-        <a href="#contact" class="landing__button landing__button--inverted">
-          Schedule a Session &nbsp; <i class="fas fa-pen"></i>
         </a>
       </div>
     </div>
@@ -36,17 +36,17 @@
   {{--  End landing  --}}
   {{--  Begin About Us  --}}
   {{--  Fixed position background is outside container  --}}
-  <div class="about-us__fixed-background hidden-xs hidden-sm"></div>
+  <div class="about-us__fixed-background d-none d-lg-block"></div>
   <section id="about" class="about-us">
     <article class="container-fluid about-us__text-container">
       <div class="row about-us__heading-container">
-        <h1 class="col-xs-12 col-md-6 col-md-offset-5 header-font spaced-word about-us__heading">
-          <span class="hidden-md hidden-lg">About Us</span>
-          <span class="hidden-xs hidden-sm">About<br>Us</span>
+        <h1 class="col-xs-12 col-lg-6 offset-lg-5 header-font spaced-word about-us__heading">
+          <span class="d-lg-none d-xl-none">About Us</span>
+          <span class="d-none d-lg-block">About<br>Us</span>
         </h1>
       </div>
       <div class="row">
-        <div class="col-xs-12 col-md-6 col-md-offset-6">
+        <div class="col-xs-12 col-lg-6 offset-lg-6">
           <p class="about-us__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a arcu ut dui scelerisque tincidunt eget eget elit. Phasellus ac lacinia felis. Vestibulum vel tellus quis nisi hendrerit malesuada sed id elit. Aenean nec quam augue. Aliquam non eros pulvinar arcu posuere condimentum. Phasellus libero arcu, vestibulum ut tellus a, scelerisque sollicitudin justo. Pellentesque eleifend lobortis urna nec elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
           <p class="about-us__paragraph">Morbi volutpat dictum ex, sed rhoncus odio feugiat et. Ut rutrum lectus nisl, efficitur dictum erat viverra vel. Praesent in tempus ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc nec ante bibendum, maximus dui quis, posuere libero. Integer tristique sapien quis purus finibus viverra. Integer at quam hendrerit, tempor metus at, condimentum elit. Duis blandit urna ac neque consequat dignissim. Nullam quis placerat urna, ut blandit tortor. Aliquam mattis congue tristique. Morbi tristique tristique justo eget tincidunt.</p>
         </div>          
@@ -59,67 +59,71 @@
     <div class="darkening-layer"></div>
     <div class="container-fluid">
       <div class="row pricing__heading-container">
-        <h1 class="col-xs-12 col-md-6 col-md-offset-1 header-font spaced-word pricing__heading">
+        <h1 class="col-xs-12 col-lg-6 offset-lg-1 header-font spaced-word pricing__heading">
           <span>Pricing</span>
         </h1>
       </div>
     </div>
     <div class="container-fluid pricing__cards-container">
       <div class="row">
-        <div class="col-xs-12 col-sm-6 pricing__card">
-          <div class="card__icon">
-            <i class="fas fa-microphone fa-5x"></i>
-          </div>
-          <div class="card__title header-font">
-            Recording
-          </div>
-          <div class="card__price">
-            $300\\<sup>song</sup>
-          </div>
-          <div class="card__description">
-            At <span class="header-font">Recording Studio</span>, we have a modern setup with professional engineers that make sure that the only thing that gets attention is your music.
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 pricing__card">
-          <div class="card__icon">
-            <i class="fas fa-sliders-h fa-5x"></i>
-          </div>
-          <div class="card__title header-font">
-            Mixing
-          </div>
-          <div class="card__price">
-            $50\\<sup>minute</sup>
-          </div>
-          <div class="card__description">
-            At <span class="header-font">Recording Studio</span>, we have a modern setup with professional engineers that make sure that the only thing that gets attention is your music.
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 pricing__card">
-          <div class="card__icon">
-            <i class="fas fa-record-vinyl fa-5x"></i>
-          </div>
-          <div class="card__title header-font">
-            Distribution
-          </div>
-          <div class="card__price">
-            Get a Quote!
-          </div>
-          <div class="card__description">
-            At <span class="header-font">Recording Studio</span>, we have a modern setup with professional engineers that make sure that the only thing that gets attention is your music.
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 pricing__card">
-          <div class="card__icon">
-            <i class="fab fa-spotify fa-5x"></i>
-          </div>
-          <div class="card__title header-font">
-            Streaming
-          </div>
-          <div class="card__price">
-            FREE!<sup>*</sup>
-          </div>
-          <div class="card__description">
-            At <span class="header-font">Recording Studio</span>, we have a modern setup with professional engineers that make sure that the only thing that gets attention is your music.
+        <div class="col-xs-12 col-md-8">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 card">
+              <div class="card__icon">
+                <i class="fas fa-microphone fa-5x"></i>
+              </div>
+              <div class="card__title header-font">
+                Recording
+              </div>
+              <div class="card__price">
+                $300\\<sup>song</sup>
+              </div>
+              <div class="card__description">
+                At <span class="header-font">Recording Studio</span>, we have a modern setup with professional engineers that make sure that the only thing that gets attention is your music.
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 card">
+              <div class="card__icon">
+                <i class="fas fa-sliders-h fa-5x"></i>
+              </div>
+              <div class="card__title header-font">
+                Mixing
+              </div>
+              <div class="card__price">
+                $50\\<sup>minute</sup>
+              </div>
+              <div class="card__description">
+                At <span class="header-font">Recording Studio</span>, we have a modern setup with professional engineers that make sure that the only thing that gets attention is your music.
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 card">
+              <div class="card__icon">
+                <i class="fas fa-record-vinyl fa-5x"></i>
+              </div>
+              <div class="card__title header-font">
+                Distribution
+              </div>
+              <div class="card__price">
+                Get a Quote!
+              </div>
+              <div class="card__description">
+                At <span class="header-font">Recording Studio</span>, we have a modern setup with professional engineers that make sure that the only thing that gets attention is your music.
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 card">
+              <div class="card__icon">
+                <i class="fab fa-spotify fa-5x"></i>
+              </div>
+              <div class="card__title header-font">
+                Streaming
+              </div>
+              <div class="card__price">
+                FREE!<sup>*</sup>
+              </div>
+              <div class="card__description">
+                At <span class="header-font">Recording Studio</span>, we have a modern setup with professional engineers that make sure that the only thing that gets attention is your music.
+              </div>
+            </div>
           </div>
         </div>
       </div>
