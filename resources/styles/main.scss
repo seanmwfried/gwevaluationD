@@ -23,25 +23,7 @@ html {
 } 
 
 a {
-  color: white;
   text-decoration: none;
-
-  &:visited {
-    color: white;
-    text-decoration: none;
-  }
-  &:hover {
-    color: white;
-    text-decoration: none;
-  }
-  &:active {
-    color: white;
-    text-decoration: none;
-  }
-  &:focus {
-    color: white;
-    text-decoration: none;
-  }
 }
 
 //Helper classes

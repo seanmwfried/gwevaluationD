@@ -7,159 +7,40 @@
 @section('content')
   {{--  Begin landing  --}}
   <section id="top" class="landing">
+    <div class="darkening-layer"></div>
     {{--  Video background for landing  --}}
     <video class="landing__video d-none d-lg-block" src="videos/headervideo.mp4" muted autoplay loop></video>
-    <div class="darkening-layer"></div>
     {{--  Rolodex splash  --}}
-    <div class="landing__splash d-flex flex-column justify-content-center align-items-center d-md-block header-font">
-      <div class="rolodex">
-        <div class="rolodex__item">
-          <span>Affordable</span>
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col d-flex flex-column justify-content-center">
+          <div class="jumbotron landing__jumbotron zindex1">
+            <h1 class="landing__jumbotron-header header-font spaced-word">Recording Studio</h1>
+            <div class="mb-3 hr zindex1"></div>
+            <p class="lead">Affordable. Flexible. Relaxed.</p>
+            <div class="row justify-content-md-center">
+              <a href="#about" class="landing__button col-12 btn btn-outline-light mb-2 mb-md-0 mr-md-2">Learn more &nbsp; <i class="fas fa-book-open"></i></a>
+              <a href="#contact" class="landing__button col-12 btn btn-light">Schedule a Session &nbsp; <i class="fas fa-pen"></i></a>
+            </div>
+          </div>
         </div>
-        <div class="rolodex__item">
-          <span>Flexible</span>
-        </div>
-        <div class="rolodex__item">
-          <span>Relaxed</span>
-        </div>
-      </div>
-      <div class="landing__call-to-action d-flex flex-column flex-md-row justify-content-center">
-        <a href="#contact" class="landing__button landing__button--inverted order-md-2">
-          Schedule a Session &nbsp; <i class="fas fa-pen"></i>
-        </a>
-        <a href="#about" class="landing__button">
-          Learn More &nbsp; <i class="fas fa-book-open"></i>
-        </a>
       </div>
     </div>
   </section>
   {{--  End landing  --}}
   {{--  Begin About Us  --}}
   {{--  Fixed position background is outside container  --}}
-  <div class="about-us__fixed-background d-none d-lg-block"></div>
   <section id="about" class="about-us">
-    <article class="container-fluid about-us__text-container">
-      <div class="row about-us__heading-container">
-        <h1 class="col-xs-12 col-lg-6 offset-lg-5 header-font spaced-word about-us__heading">
-          <span class="d-lg-none d-xl-none">About Us</span>
-          <span class="d-none d-lg-block">About<br>Us</span>
-        </h1>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-lg-6 offset-lg-6">
-          <p class="about-us__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a arcu ut dui scelerisque tincidunt eget eget elit. Phasellus ac lacinia felis. Vestibulum vel tellus quis nisi hendrerit malesuada sed id elit. Aenean nec quam augue. Aliquam non eros pulvinar arcu posuere condimentum. Phasellus libero arcu, vestibulum ut tellus a, scelerisque sollicitudin justo. Pellentesque eleifend lobortis urna nec elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-          <p class="about-us__paragraph">Morbi volutpat dictum ex, sed rhoncus odio feugiat et. Ut rutrum lectus nisl, efficitur dictum erat viverra vel. Praesent in tempus ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc nec ante bibendum, maximus dui quis, posuere libero. Integer tristique sapien quis purus finibus viverra. Integer at quam hendrerit, tempor metus at, condimentum elit. Duis blandit urna ac neque consequat dignissim. Nullam quis placerat urna, ut blandit tortor. Aliquam mattis congue tristique. Morbi tristique tristique justo eget tincidunt.</p>
-        </div>          
-      </div>
-    </article>
   </section>
   {{--  End About Us  --}}
   {{--  Begin Pricing  --}}
   <section id="pricing" class="pricing">
     <div class="darkening-layer"></div>
-    <div class="container-fluid">
-      <div class="row pricing__heading-container">
-        <h1 class="col-xs-12 col-lg-6 offset-lg-1 header-font spaced-word pricing__heading">
-          <span>Pricing</span>
-        </h1>
-      </div>
-    </div>
-    <div class="container-fluid pricing__cards-container">
-      <div class="row">
-        <div class="col-xs-12 col-lg-8 col-xl-6">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6">
-              <div class="card">
-                <div class="card__icon">
-                  <i class="fas fa-microphone fa-5x"></i>
-                </div>
-                <div class="card__title header-font">
-                  Recording
-                </div>
-                <div class="card__price">
-                  $300\\<sup>song</sup>
-                </div>
-                <div class="card__description">
-                  At <span class="header-font">Recording Studio</span>, we have a modern setup with professional engineers that make sure that the only thing that gets attention is your music.
-                </div>
-              </div>
-              </div>
-            <div class="col-xs-12 col-sm-6">
-              <div class="card">
-                <div class="card__icon">
-                  <i class="fas fa-sliders-h fa-5x"></i>
-                </div>
-                <div class="card__title header-font">
-                  Mixing
-                </div>
-                <div class="card__price">
-                  $50\\<sup>minute</sup>
-                </div>
-                <div class="card__description">
-                  At <span class="header-font">Recording Studio</span>, we have a modern setup with professional engineers that make sure that the only thing that gets attention is your music.
-                </div>
-              </div>
-              </div>
-            <div class="col-xs-12 col-sm-6">
-              <div class="card">
-                <div class="card__icon">
-                  <i class="fas fa-record-vinyl fa-5x"></i>
-                </div>
-                <div class="card__title header-font">
-                  Distribution
-                </div>
-                <div class="card__price">
-                  Get a Quote!
-                </div>
-                <div class="card__description">
-                  At <span class="header-font">Recording Studio</span>, we have a modern setup with professional engineers that make sure that the only thing that gets attention is your music.
-                </div>
-              </div>
-              </div>
-            <div class="col-xs-12 col-sm-6">
-              <div class="card">
-                <div class="card__icon">
-                  <i class="fab fa-spotify fa-5x"></i>
-                </div>
-                <div class="card__title header-font">
-                  Streaming
-                </div>
-                <div class="card__price">
-                  FREE!<sup>*</sup>
-                </div>
-                <div class="card__description">
-                  At <span class="header-font">Recording Studio</span>, we have a modern setup with professional engineers that make sure that the only thing that gets attention is your music.
-                </div>
-              </div>
-              </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
   {{--  End Pricing  --}}
   {{--  Begin Contact Form  --}}
-  {{--  After playing around with a few things, I decided to just use a flex container for the contact form since it will be displayed the same at all resolutions, without the need for responsiveness. When veritcally centering, Stack Overflow recommends flexbox. Since this is the only element in this section, I didn't see a need for Bootstrap classes. --}}
   <section id="contact" class="contact-form">
-    <div class="contact-form__form-container">
-      <h2 class="contact-form__form-header">Contact Us</h2>
-    <form action="{{ route('ContactrequestController.create') }}" method="POST" class="contact-form__form">
-      {{ csrfField() }}
-        <div class="contact-form__form-input-group">
-          <label for="name">Name</label>
-          <input type="text" name="name" id="name" placeholder="John Doe">
-        </div>
-        <div class="contact-form__form-input-group">
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" placeholder="john.doe@gmail.com">
-        </div>
-        <div class="contact-form__form-input-group">
-          <label for="phone">Phone</label>
-          <input type="tel" name="phone" id="phone" placeholder="(555) 555-5555">
-        </div>
-        <button type="submit" class="btn btn-info contact-form__button">Send</button>
-      </form>
-    </div>
+    
   </section>
   {{--  End Contant Form  --}}
 @endsection
