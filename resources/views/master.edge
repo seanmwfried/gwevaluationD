@@ -101,6 +101,16 @@
     &copy; 2020 Sean Fried
   </footer>
   {{--  End Footer  --}}
+  {{--  Section to show that we're retrieving data from the server. Please consider this separate from the website  --}}
+  <div class="data-grid">
+    <div class="data-grid__container">
+      <span class="data-grid__grid-header">Name</span>
+      <span class="data-grid__grid-header">Email</span>
+      <span class="data-grid__grid-header">Phone</span>
+      @!section('data-grid')
+    </div>
+  </div>
+  {{--  End data grid  --}}
   {{--  Requirements jQuery, Popper, and then Bootstrap itself  --}}
   <script 
     src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 

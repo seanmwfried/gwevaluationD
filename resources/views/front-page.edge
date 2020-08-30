@@ -166,10 +166,13 @@
 
 @section('scripts')
   <script src="scripts/front-page.js"></script>
-  
+@endsection
+
+{{--  Insert form information back onto page to show we are sending and retrieving data from the server  --}}
+@section('data-grid')
   @each(request in requests)
-  <script>
-    alert({{request}})
-  </script>
-  @endeach
+      <span class="data-grid__item">{{ request.name }}</span>
+      <span class="data-grid__item">{{ request.email }}</span>
+      <span class="data-grid__item">{{ request.phone }}</span>
+    @endeach
 @endsection

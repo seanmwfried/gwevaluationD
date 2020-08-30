@@ -182,4 +182,24 @@ footer {
   background-color: color(verydark);
   color: #aaa;
   z-index: -1;
+} 
+
+//Data grid section
+.data-grid {
+  height: 50vh;
+  background-color: color(bright);
+  color: color(verydark);
+  z-index: 1;
+
+  &__container {
+    max-width: 500px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  &__grid-header {
+    font-weight: bold;
+    text-align: center;
+  }
 }
