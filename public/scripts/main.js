@@ -6,32 +6,26 @@
   document.addEventListener('load', CheckScroll);
   
   function CheckScroll(event) {
-    //Check small window
-    if(window.innerWidth <= 992){
-      const scrollTop = event.target.scrollingElement.scrollTop;
-      const header = document.getElementsByTagName("header")[0];
+    const scrollTop = event.target.scrollingElement.scrollTop;
+    const header = document.getElementsByTagName("header")[0];
+    const backToTopButton = document.getElementsByClassName("btn-back-to-top")[0];
 
-      //Add and removed 'scrolled' class when scrolling for effect
-      if ( scrollTop >= 50 && !header.classList.contains("scrolled")) {
-        header.classList.add("scrolled");
-      } else if ( scrollTop < 50 && header.classList.contains("scrolled")) {
-        header.classList.remove("scrolled");
-      }
-    } else {
-      const scrollTop = event.target.scrollingElement.scrollTop;
-      const backToTopButton = document.getElementsByClassName("btn-back-to-top")[0];
-      //Else use back to top button
-      //Add and removed 'scrolled' class when scrolling for effect
-      if ( scrollTop >= 50 && !backToTopButton.classList.contains("scrolled")) {
-        backToTopButton.classList.add("scrolled");
-      } else if ( scrollTop < 50 && backToTopButton.classList.contains("scrolled")) {
-        backToTopButton.classList.remove("scrolled");
-      }
+    //Add and removed 'scrolled' class when scrolling for effect
+    if ( scrollTop >= 50 && !header.classList.contains("scrolled")) {
+      header.classList.add("scrolled");
+    } else if ( scrollTop < 50 && header.classList.contains("scrolled")) {
+      header.classList.remove("scrolled");
     }
-  }
-
-  
+    
+    //Add and removed 'scrolled' class when scrolling for effect
+    if ( scrollTop >= 50 && !backToTopButton.classList.contains("scrolled")) {
+      backToTopButton.classList.add("scrolled");
+    } else if ( scrollTop < 50 && backToTopButton.classList.contains("scrolled")) {
+      backToTopButton.classList.remove("scrolled");
+    }
+  }  
 })();
+
 //Mobile menu animations
 (() => {
   const openMenuButton = document.getElementsByClassName("nav__mobile-menu-button")[0];
