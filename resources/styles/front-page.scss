@@ -22,6 +22,7 @@
   background-position: center;
   background-size: cover;
   height: 70vh;
+  box-shadow: 0 2px 5px color(boxshadow);
 
   &__video {
     position: absolute;
@@ -72,9 +73,123 @@
 //About
 .about-us {
   color: color(verydark);
+  
+  .hr {
+    height: 2px;
+    width: 100%;
+    background-image: linear-gradient(to right, transparent, color(verydark), transparent);
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 500px;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__paragraph {
+    text-indent: 2rem;
+  }
 }
 
 //Pricing
 .pricing {
   position: relative;
+  background-color: color(seabluegreen);
+  box-shadow: 0 2px 5px color(boxshadow), 0 -2px 5px color(boxshadow);
+  z-index: 1;
+
+  @include media-breakpoint-up(lg) {
+    background-image: url("../images/computersetup.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .hr {
+    height: 2px;
+    width: 100%;
+    background-image: linear-gradient(to right, transparent, color(bright), transparent);
+  }
+
+  .card {
+    max-width: 300px;
+    margin: 10px auto;
+    background-color: color(bright);
+    color: color(verydark);
+    text-align: center;
+    padding: 30px 15px;
+    border-radius: 20px;
+  
+    &__icon {
+      padding-bottom: 20px;
+    }
+  
+    &__title {
+      padding-top: 10px;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  
+    &__price {
+      font-size: 1.25rem;
+      font-style: italic;
+    }
+  
+    //&__description {}
+  }
+}
+
+//Contact
+.contact-form {
+  position: relative;
+  height: 70vh;
+  background-image: url("../images/homestudio.jpg");
+  background-position: bottom left;
+  background-size: cover;
+
+  @include media-breakpoint-up(lg) {
+    & {
+      background-size: cover;
+    }
+  }
+
+  &__form-container {
+    background-color: color(bright);
+    color: color(verydark);
+    padding: 25px;
+    min-width: 300px;
+    box-shadow: 2px 2px 5px color(boxshadow);
+    border-radius: 10px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__form-input-group {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+  }
+
+  &__form-input-group input {
+    border-radius: 5px;
+    border: 2px solid #bbb;
+    padding: 5px;
+    /* border-style: none; */
+  }
+
+  &__form-input-group input:focus {
+    border: 2px solid $info;
+  }
+
+  &__form-input-group input::placeholder {
+    color: #888;
+  }
+  
+  &__button {
+    margin-top: 5px;
+  }
 }

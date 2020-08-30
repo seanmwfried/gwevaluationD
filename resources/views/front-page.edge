@@ -29,38 +29,146 @@
   </section>
   {{--  End landing  --}}
   {{--  Begin About Us  --}}
-  <section id="about" class="about-us">
-    <div class="container">
+  <section id="about" class="about-us mb-5">
+    <div class="container mt-3">
       <div class="row">
         <div class="col">
           <h1 class="text-center">About Us</h1>
-          <div class="mb-3 hr"></div>
+          <div class="mb-3 mt-3 hr"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
+          <div class="about-us__image">
+            <img class="rounded"src="images/mixer.jpg" alt="Picture of a hand on a mixer">
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <p class="about-us__paragraph mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a arcu ut dui scelerisque tincidunt eget eget elit. Phasellus ac lacinia felis. Vestibulum vel tellus quis nisi hendrerit malesuada sed id elit. Aenean nec quam augue. Aliquam non eros pulvinar arcu posuere condimentum. Phasellus libero arcu, vestibulum ut tellus a, scelerisque sollicitudin justo. Pellentesque eleifend lobortis urna nec elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+          <p class="about-us__paragraph">Morbi volutpat dictum ex, sed rhoncus odio feugiat et. Ut rutrum lectus nisl, efficitur dictum erat viverra vel. Praesent in tempus ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc nec ante bibendum, maximus dui quis, posuere libero. Integer tristique sapien quis purus finibus viverra. Integer at quam hendrerit, tempor metus at, condimentum elit. Duis blandit urna ac neque consequat dignissim. Nullam quis placerat urna, ut blandit tortor. Aliquam mattis congue tristique. Morbi tristique tristique justo eget tincidunt.</p>
         </div>
       </div>
     </div>
   </section>
   {{--  End About Us  --}}
   {{--  Begin Pricing  --}}
-  <section id="pricing" class="pricing">
+  <section id="pricing" class="pricing zindex1">
     <div class="darkening-layer"></div>
+    <div class="container position-relative pt-3 pb-3 zindex1">
+      <div class="row">
+        <div class="col">
+          <h1 class="text-center">Pricing</h1>
+          <div class="mb-3 mt-3 hr"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container position-relative zindex1 pb-5">
+      <div class="row justify-content-lg-center">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card">
+            <div class="card__icon">
+              <i class="fas fa-microphone fa-5x"></i>
+            </div>
+            <div class="card__title header-font">
+              Recording
+            </div>
+            <div class="card__price">
+              $300\\<sup>song</sup>
+            </div>
+            <div class="card__description">
+              At <span class="header-font">Recording Studio</span>, we have a modern setup with professional engineers that make sure that the only thing that gets attention is your music.
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card">
+            <div class="card__icon">
+              <i class="fas fa-sliders-h fa-5x"></i>
+            </div>
+            <div class="card__title header-font">
+              Mixing
+            </div>
+            <div class="card__price">
+              $50\\<sup>minute</sup>
+            </div>
+            <div class="card__description">
+              At <span class="header-font">Recording Studio</span>, we have a modern setup with professional engineers that make sure that the only thing that gets attention is your music.
+            </div>
+          </div>
+        </div>
+        <div class="w-100"></div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card">
+            <div class="card__icon">
+              <i class="fas fa-record-vinyl fa-5x"></i>
+            </div>
+            <div class="card__title header-font">
+              Distribution
+            </div>
+            <div class="card__price">
+              Get a Quote!
+            </div>
+            <div class="card__description">
+              At <span class="header-font">Recording Studio</span>, we have a modern setup with professional engineers that make sure that the only thing that gets attention is your music.
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card">
+            <div class="card__icon">
+              <i class="fab fa-spotify fa-5x"></i>
+            </div>
+            <div class="card__title header-font">
+              Streaming
+            </div>
+            <div class="card__price">
+              FREE!<sup>*</sup>
+            </div>
+            <div class="card__description">
+              At <span class="header-font">Recording Studio</span>, we have a modern setup with professional engineers that make sure that the only thing that gets attention is your music.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
   {{--  End Pricing  --}}
   {{--  Begin Contact Form  --}}
   <section id="contact" class="contact-form">
-    
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col d-flex justify-content-center align-items-center h-100">
+          <div class="contact-form__form-container">
+            <h2 class="contact-form__form-header">Contact Us</h2>
+            <form action="{{ route('ContactrequestController.create') }}" method="POST" class="contact-form__form">
+              {{ csrfField() }}
+                <div class="contact-form__form-input-group">
+                  <label for="name">Name</label>
+                  <input type="text" name="name" id="name" placeholder="John Doe">
+                </div>
+                <div class="contact-form__form-input-group">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" id="email" placeholder="john.doe@gmail.com">
+                </div>
+                <div class="contact-form__form-input-group">
+                  <label for="phone">Phone</label>
+                  <input type="tel" name="phone" id="phone" placeholder="(555) 555-5555">
+                </div>
+                <button type="submit" class="btn btn-info contact-form__button">Send</button>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
   {{--  End Contant Form  --}}
-@endsection
-
-@section('scripts')
-  <script src="scripts/front-page.js"></script>
 @endsection
 
 {{--  Insert form information back onto page to show we are sending and retrieving data from the server  --}}
 @section('data-grid')
   @each(request in requests)
-      <span class="data-grid__item">{{ request.name }}</span>
-      <span class="data-grid__item">{{ request.email }}</span>
-      <span class="data-grid__item">{{ request.phone }}</span>
-    @endeach
+    <span class="data-grid__item">{{ request.name }}</span>
+    <span class="data-grid__item">{{ request.email }}</span>
+    <span class="data-grid__item">{{ request.phone }}</span>
+  @endeach
 @endsection
