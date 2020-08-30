@@ -1,4 +1,4 @@
-//Rolodex animations
+// Rolodex animations
 (() => {
   const rolodexItems = document.getElementsByClassName("rolodex__item");
 
