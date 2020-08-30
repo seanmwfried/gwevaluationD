@@ -8,14 +8,14 @@
   {{--  Bootstrap  --}}
   <link 
     rel="stylesheet" 
-    href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" 
-    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
     crossorigin="anonymous"
   >
-  <link rel="stylesheet" href="styles/main.css">
-
+  
   {{--  Plug for extra stylesheets  --}}
   @!section('stylesheet')
+  <link rel="stylesheet" href="styles/main.css">
 
   {{--  FontAwesome  --}}
   <script src="https://kit.fontawesome.com/16308709c3.js" crossorigin="anonymous"></script>
@@ -23,41 +23,41 @@
 <body>
   <noscript>This site requires JavaScript to be enabled to be displayed correctly.</noscript>
   {{--  Fixed div for go back to top button on medium to large devices  --}}
-  <div class="btn-back-to-top hidden-xs hidden-sm">
+  <div class="btn-back-to-top d-none d-lg-block rounded-circle">
     <a href="#top">
       <i class="fas fa-chevron-up fa-2x"></i>
     </a>
   </div>
   {{--  Mobile Menu Popout  --}}
-  <div class="mobile-menu hidden-md hidden-lg">
+  <div class="mobile-menu d-lg-none d-xl-none">
     <div class="mobile-menu__close-button">
       <i class="fas fa-times fa-2x"></i>
     </div>
-    <ul class="mobile_menu__list-container list-unstyled">
-      <li class="mobile_menu__list-item">
+    <ul class="mobile-menu__list-container list-unstyled">
+      <li class="mobile-menu__list-item">
         <a href="#top">
-          <div>
+          <div class="mobile-menu__list-item-text">
             Home
           </div>
         </a>
       </li>
-      <li class="mobile_menu__list-item">
+      <li class="mobile-menu__list-item">
         <a href="#about">
-          <div>
+          <div class="mobile-menu__list-item-text">
             About
           </div>
         </a>
       </li>
-      <li class="mobile_menu__list-item">
+      <li class="mobile-menu__list-item">
         <a href="#pricing">
-          <div>
+          <div class="mobile-menu__list-item-text">
             Pricing
           </div>
         </a>
       </li>
-      <li class="mobile_menu__list-item">
+      <li class="mobile-menu__list-item">
         <a href="#contact">
-          <div>
+          <div class="mobile-menu__list-item-text">
             Contact
           </div>
         </a>
@@ -66,39 +66,57 @@
   </div>
   {{--  Begin Header / Nav  --}}
   <header class="container-fluid">
-    <nav class="row">
-      <span class="col-xs-8 col-md-3 spaced-word header-font nav__logo">Recording<br>Studio</span>
-      <ul class="col-xs-4 col-md-9 nav__ul list-unstyled">
-        <li class="hidden-xs hidden-sm">
-          <a href="#" class="nav__link">
+    <nav class="nav row no-gutters d-flex align-items-center">
+      <span class="spaced-word header-font nav__logo col">Recording<br>Studio</span>
+      <ul class="nav__ul col d-flex justify-content-end list-unstyled">
+        <li>
+          <a href="#top" class="nav__link d-none d-lg-block">
             About
           </a>
         </li>
-        <li class="hidden-xs hidden-sm">
-          <a href="#pricing" class="nav__link">
+        <li>
+          <a href="#pricing" class="nav__link d-none d-lg-block">
             Pricing
           </a>
         </li>
-        <li class="hidden-xs hidden-sm">
-          <a href="#contact" class="nav__link">
+        <li>
+          <a href="#contact" class="nav__link d-none d-lg-block">
             Contact
           </a>
         </li>
-        <li class="hidden-md hidden-lg nav__mobile-menu-button">
+        <li class="nav__mobile-menu-button d-lg-none">
           <i class="fas fa-bars fa-2x"></i>
         </li>
       </ul>
     </nav>
   </header>
   {{--  End Header / Nav  --}}
-  {{--  Begin Content  --}}
-  @!section('content')
-  {{--  End Content  --}}
+  <main>
+    {{--  Begin Content  --}}
+    @!section('content')
+    {{--  End Content  --}}
+  </main>
   {{--  Begin Footer  --}}
   <footer>
     &copy; 2020 Sean Fried
   </footer>
   {{--  End Footer  --}}
+  {{--  Requirements jQuery, Popper, and then Bootstrap itself  --}}
+  <script 
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+    crossorigin="anonymous"
+  ></script>
+  <script 
+  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" 
+  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" 
+  crossorigin="anonymous"
+  ></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" 
+  integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" 
+  crossorigin="anonymous"
+  ></script>
+  {{--  Script for header and mobile menus  --}}
   <script src="scripts/main.js"></script>
   {{--  Plug for extra JavaScript files  --}}
   @!section('scripts')

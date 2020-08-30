@@ -1,0 +1,372 @@
+@import "sass/_master.scss";
+
+.darkening-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0008;
+  background-repeat: repeat;
+}
+
+//Landing
+.landing {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+  box-shadow: 0 2px 5px color(boxshadow);
+  z-index: 1;
+  background-image: url("../images/sm7b_cropped.jpg");
+  background-size: cover;
+  background-position: center;
+
+  &__video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+  }
+
+  &__splash {
+    height: 100%;
+    
+    @include media-breakpoint-up(sm) {
+      & {
+        height: 70vh;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      & {
+        position: absolute;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__call-to-action {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    z-index: 1;
+
+    @include media-breakpoint-up(sm) {
+      & {
+        
+      }
+    }
+  }
+
+  &__button {
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+    width: 100%;
+    max-width: 275px;
+    border: 1px solid color(bright);
+    color: color(bright);
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      background-color: color(bright);
+      color: color(verydark);
+    }
+
+    &--inverted, 
+    &--inverted:focus, 
+    &--inverted:visited,
+    &--inverted:active {
+      background-color: color(bright);
+      color: color(verydark);
+
+      &:hover {
+        background-color: $info;
+        border-color: $info;
+        color: color(bright);
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      margin: 0 10px;
+      width: 275px;
+    }
+  }
+
+}
+
+.rolodex {
+  position: relative;
+  margin: 0 auto;
+  height: 75px;
+  width: 90%;
+  border: 3px solid color(bright);
+  overflow: hidden;
+
+  &__item {
+    position: absolute;
+    top: 100%;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    letter-spacing: 0.75rem;
+
+    &:first-child {
+      top: 0;
+      transition-duration: 1s;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    & {
+      height: 100px;
+
+      &__item {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    & {
+      width: 600px;
+      height: 200px;
+    }
+
+    &__item {
+      letter-spacing: 1.5rem;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    & {      
+      width: 800px;
+      height: 100px;
+    }
+  }
+}
+
+//About us
+.about-us {
+  color: color(verydark);
+
+  &__fixed-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/mixer.jpg");
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  &__heading-container {
+    background: linear-gradient(to right, transparent 20%, color(bright) 40%, color(bright) 60%, transparent 80%);
+
+    &::after {
+      width: 100%;
+      display: block;
+      height: 2px;
+      content: " ";
+      background: linear-gradient(to right, transparent 20%, color(verydark) 40%, color(verydark) 60%, transparent 80%);
+    }
+
+    @include media-breakpoint-up(lg) {
+      & {
+        background: linear-gradient(to right, transparent 40%,  color(bright) 75%);
+
+        &::after {
+          background: linear-gradient(to right, transparent 40%,  color(verydark) 75%);
+        }
+      }
+    }
+  }
+
+  &__heading {
+    text-align: center;
+    padding: 15px 0px;
+
+    @include media-breakpoint-up(lg) {
+      text-align: right;
+    }
+  }
+
+  &__text-container {
+    background: linear-gradient(to right, transparent 20%, #ddd 40%, #ddd 60%, transparent 80%);
+
+    @include media-breakpoint-up(lg) {
+      background: linear-gradient(to right, transparent, #ddd 60%);
+    }
+  }
+
+  &__paragraph {
+    text-indent: 2em;
+    margin: 20px 0px;
+    font-size: initial;
+
+    @include media-breakpoint-up(sm) {
+      & {
+        margin: 30px 30px;
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      & {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+//Pricing
+.pricing {
+  position: relative;
+  background-color: color(seabluegreen);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 -2px 5px color(boxshadow), 0 2px 5px color(boxshadow);
+  z-index: 1;
+
+  @include media-breakpoint-up(lg) {
+    & {
+      background-image: url("../images/computersetup.jpg");
+    }
+  }
+
+  &__heading-container {
+    margin-bottom: 10px;
+
+    &::after {
+      display: block;
+      width: 100%;
+      height: 2px;
+      content: "";
+      background: linear-gradient(to right, transparent 20%, color(bright) 40%, color(bright) 60%, transparent 80%);
+      z-index: 1;
+    }
+
+    @include media-breakpoint-up(lg) {
+      & {
+        background: linear-gradient(to left, transparent 40%,  #333 75%);
+      }
+
+      &::after {
+        background: linear-gradient(to left, transparent 40%,  color(bright) 75%);
+      }
+    }
+  }  
+
+  &__heading {
+    text-align: center;
+    padding: 15px 0px;
+
+    @include media-breakpoint-up(lg) {
+      text-align: left;
+    }
+  }
+
+  &__cards-container {
+    padding: 30px 0px;
+  }
+}
+
+//Pricing cards
+.card {
+  max-width: 300px;
+  margin: 10px auto;
+  background-color: #eee;
+  color: color(verydark);
+  text-align: center;
+  padding: 30px 15px;
+  border-radius: 20px;
+
+  &__icon {
+    padding-bottom: 20px;
+  }
+
+  &__title {
+    padding-top: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  &__price {
+    font-size: 1.25rem;
+    font-style: italic;
+  }
+
+  //&__description {}
+}
+
+//Contact
+.contact-form {
+  min-height: 70vh;
+  background-image: url("../images/homestudio.jpg");
+  background-position: bottom left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include media-breakpoint-up(lg) {
+    & {
+      background-size: cover;
+    }
+  }
+
+  &__form-container {
+    background-color: #eee;
+    color: black;
+    padding: 25px;
+    min-width: 300px;
+    box-shadow: 2px 2px 5px #000d;
+    border-radius: 10px;
+  }
+  
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__form-input-group {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+  }
+  
+  &__form-input-group input {
+    border-radius: 5px;
+    border: 2px solid #bbb;
+    padding: 5px;
+    /* border-style: none; */
+  }
+  
+  &__form-input-group input:focus {
+    border: 2px solid #33b5e5;
+  }
+  
+  &__form-input-group input::placeholder {
+    color: #888;
+  }
+  
+  &__button {
+    margin-top: 5px;
+  }
+}
