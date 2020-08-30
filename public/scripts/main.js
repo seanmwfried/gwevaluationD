@@ -25,6 +25,7 @@
     }
   }  
 })();
+
 //Mobile menu animations
 (() => {
   const openMenuButton = document.getElementsByClassName("nav__mobile-menu-button")[0];
