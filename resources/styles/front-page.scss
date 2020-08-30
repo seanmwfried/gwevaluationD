@@ -34,7 +34,7 @@
 
   &__splash {
     height: 100%;
-    
+
     @include media-breakpoint-up(sm) {
       & {
         height: 70vh;
@@ -333,29 +333,29 @@
     box-shadow: 2px 2px 5px #000d;
     border-radius: 10px;
   }
-  
+
   &__form {
     display: flex;
     flex-direction: column;
   }
-  
+
   &__form-input-group {
     display: flex;
     flex-direction: column;
     margin: 5px 0;
   }
-  
+
   &__form-input-group input {
     border-radius: 5px;
     border: 2px solid #bbb;
     padding: 5px;
     /* border-style: none; */
   }
-  
+
   &__form-input-group input:focus {
     border: 2px solid #33b5e5;
   }
-  
+
   &__form-input-group input::placeholder {
     color: #888;
   }
