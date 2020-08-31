@@ -140,21 +140,21 @@
         <div class="col d-flex justify-content-center align-items-center h-100">
           <div class="contact-form__form-container">
             <h2 class="contact-form__form-header">Contact Us</h2>
-            <form action="{{ route('ContactrequestController.create') }}" method="POST" class="contact-form__form">
+            <form action="{{ route('ContactrequestController.create') }}" method="POST" class="contact-form__form d-flex flex-column">
               {{ csrfField() }}
                 <div class="contact-form__form-input-group">
                   <label for="name">Name</label>
-                  <input type="text" name="name" id="name" placeholder="John Doe">
+                  <input type="text" name="name" id="name">
                 </div>
                 <div class="contact-form__form-input-group">
                   <label for="email">Email</label>
-                  <input type="email" name="email" id="email" placeholder="john.doe@gmail.com">
+                  <input type="email" name="email" id="email">
                 </div>
                 <div class="contact-form__form-input-group">
                   <label for="phone">Phone</label>
-                  <input type="tel" name="phone" id="phone" placeholder="(555) 555-5555">
+                  <input type="tel" name="phone" id="phone">
                 </div>
-                <button type="submit" class="btn btn-info contact-form__button">Send</button>
+                <button type="submit" class="btn btn-info contact-form__button mt-2">Send</button>
               </form>
           </div>
         </div>

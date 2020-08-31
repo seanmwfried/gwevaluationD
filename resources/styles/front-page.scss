@@ -163,10 +163,7 @@
     border-radius: 10px;
   }
 
-  &__form {
-    display: flex;
-    flex-direction: column;
-  }
+  // &__form {}
 
   &__form-input-group {
     display: flex;
@@ -184,12 +181,6 @@
   &__form-input-group input:focus {
     border: 2px solid $info;
   }
-
-  &__form-input-group input::placeholder {
-    color: #888;
-  }
   
-  &__button {
-    margin-top: 5px;
-  }
+  // &__button {}
 }
