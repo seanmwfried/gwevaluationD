@@ -6,7 +6,7 @@
 
 @section('content')
   {{--  Begin landing  --}}
-  <section id="top" class="landing">
+  <section tabindex="2" aria-label="landing" id="top" class="landing">
     <div class="darkening-layer"></div>
     {{--  Video background for landing  --}}
     <video class="landing__video d-none d-lg-block" src="videos/headervideo.mp4" muted autoplay loop></video>
@@ -29,7 +29,7 @@
   </section>
   {{--  End landing  --}}
   {{--  Begin About Us  --}}
-  <section id="about" class="about-us mb-5">
+  <section tabindex="3" aria-label="about" id="about" class="about-us mb-5">
     <div class="container mt-3">
       <div class="row">
         <div class="col">
@@ -52,7 +52,7 @@
   </section>
   {{--  End About Us  --}}
   {{--  Begin Pricing  --}}
-  <section id="pricing" class="pricing zindex1">
+  <section tabindex="4" aria-label="pricing" id="pricing" class="pricing zindex1">
     <div class="darkening-layer"></div>
     <div class="container position-relative pt-3 pb-3 zindex1">
       <div class="row">
@@ -73,7 +73,8 @@
               Recording
             </div>
             <div class="card__price">
-              $300\\<sup>song</sup>
+              <span aria-hidden="true">$300\\<sup>song</sup></span>
+              <span class="sr-only">Three hundred dollars per song</span>
             </div>
             <div class="card__description">
               At <span class="header-font">Recording Studio</span>, we have a modern setup with professional engineers that make sure that the only thing that gets attention is your music.
@@ -89,7 +90,8 @@
               Mixing
             </div>
             <div class="card__price">
-              $50\\<sup>minute</sup>
+              <span aria-hidden="true">$50\\<sup>minute</sup></span>
+              <span class="sr-only">Fifty dollars per minute of a song</span>
             </div>
             <div class="card__description">
               At <span class="header-font">Recording Studio</span>, we have a modern setup with professional engineers that make sure that the only thing that gets attention is your music.
@@ -134,7 +136,7 @@
   </section>
   {{--  End Pricing  --}}
   {{--  Begin Contact Form  --}}
-  <section id="contact" class="contact-form">
+  <section tabindex="5" aria-label="contact form" id="contact" class="contact-form">
     <div class="container h-100">
       <div class="row h-100">
         <div class="col d-flex justify-content-center align-items-center h-100">
